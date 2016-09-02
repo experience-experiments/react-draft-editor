@@ -1,6 +1,6 @@
 {
   "name": "react-draft-editor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React + Redux compatible implementation of DraftJS",
   "main": "./index.js",
   "scripts": {
