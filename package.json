@@ -1,6 +1,6 @@
 {
   "name": "react-draft-editor",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "React + Redux compatible implementation of DraftJS",
   "main": "./index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rma-consulting/react-draft-editor.git"
+    "url": "git+https://github.com/JonathanPerryRMA/react-draft-editor"
   },
   "license": "UNLICENSED",
   "dependencies": {
