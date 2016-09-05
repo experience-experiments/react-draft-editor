@@ -1,4 +1,4 @@
-#React Draft Editor
+# React Draft Editor
 
 An implementation of [Draft.js](https://facebook.github.io/draft-js/) which is simple to adapt and extend.
 
@@ -6,11 +6,11 @@ An implementation of [Draft.js](https://facebook.github.io/draft-js/) which is s
 npm install react-draft-editor --save
 ```
 
-##What's in the box?
+## What's in the box?
 
 A component for editing text, several components for styling that text, and components for previewing the text being edited as well as rendering it as a React component in your application.
 
-###Prerequisites
+### Prerequisites
 
 Create a parent component.
 
@@ -58,7 +58,7 @@ export class ParentEditor extends React.Component {
 
 With that, we can begin *editing text*, and we can *change the style of that text* with keyboard controls. But we can also create visual elements for styling the text by importing some more components.
 
-###Styling Text
+### Styling Text
 
 For styling text as bold, import the `<Bold />` component from `react-draft-editor`.
 
@@ -94,14 +94,14 @@ The `<Bold />` component will render as a `button` in `HTML`. If you don't want 
 ```
 class MyBold extends Bold {
   render() {
-  	return (
+    return (
       <span
         className={this.getClassNames()}
         onMouseDown={this.handleMouseDown.bind(this)}
         onMouseUp={this.handleMouseUp.bind(this)}>
           Bold
       </span>
-  	)
+    )
   }
 }
 
@@ -135,7 +135,7 @@ import {
 
 Or, pick and choose. Like a buffet.
 
-###Saving Text
+### Saving Text
 
 The parent component we have created doesn't do anything with the text you can edit and style. It doesn't import text from anywhere and it doesn't export it, either. That's intentional. The `react-draft-editor` package doesn't mind where the the text comes from or where it goes to: it only minds about `onChange` and `editorState`.
 
@@ -175,16 +175,16 @@ export class ParentEditor extends React.Component {
   }
 
   handleSaveClick() {
-  	const { onSaveContent, editorState } = this.state
-  	onSaveContent(convertToRaw(editorState.getCurrentContent()))
+    const { onSaveContent, editorState } = this.state
+    onSaveContent(convertToRaw(editorState.getCurrentContent()))
   }
 
   render() {
-  	return (
-  	  <button onClick={this.handleSaveClick.bind(this)}>
-  	    Save
-  	  </button>
-  	)
+    return (
+      <button onClick={this.handleSaveClick.bind(this)}>
+        Save
+      </button>
+    )
   }
 }
 ```
@@ -192,7 +192,7 @@ What happens with the `JSON`? What does `onSaveContent` do with it?
 
 That's up to you.
 
-###Examples
+### Examples
 
 There are some example implementations included in the package. On the file system, `cd` to the `react-draft-editor` package and the directory named `pub`. In there, you'll find `client`, `server` and `public`. Look in `client` for the React app, `server` for the Express app, and `public` for the `HTML` and `CSS`.
 
@@ -204,7 +204,7 @@ To launch the application in your browswer, install all of the `dependencies` an
 
 Browse `http://localhost:8080`.
 
-###One Last Thing
+### One Last Thing
 
 The `react-draft-editor` package contains React components, but it does not have any opinion on the styling that you apply to those components, or to the [Draft.js](https://facebook.github.io/draft-js/) components it implements, but it does define some class names which change according to user behaviour.
 
@@ -222,7 +222,7 @@ When text in the editor is selected and the button is clicked, that class attrib
 
 And that's it. Hover states, focus states, and exactly what styling is applied by the `bold` and `is-selected` declarations? Again, that's up to you.
 
-###One Very Last Thing
+### One Very Last Thing
 
 You may want to include two declarations in your CSS:
 
