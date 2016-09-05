@@ -1,0 +1,104 @@
+
+  @import url(normalize.css);
+
+  body {
+    font-family: 'Open Sans', sans-serif
+  }
+
+  .public-DraftStyleDefault-block { margin: 1rem 0; }
+  li .public-DraftStyleDefault-block { margin: 0; }
+
+  pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+
+  h1 {
+    margin: 1rem;
+  }
+
+  nav {
+    margin: 1rem;
+  }
+  nav ul,
+  nav ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  nav ul li {
+    margin: .35rem 0
+  }
+
+  button {
+    padding: .35rem;
+    margin: .15rem;
+    border-radius: 4px;
+    background-color: #337ab7;
+    border: none;
+    color: white;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    opacity: .75;
+  }
+
+  button:focus,
+  button:hover,
+  button.is-selected {
+    opacity: 1
+  }
+
+  .container {
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .preview-container,
+  .render-container {
+    flex: 1 0 0;
+  }
+
+  .preview-container {
+    background-color: #fffae6;
+    border: 1px solid #fff0b3; /* #f5c52c; */
+    border-radius: 4px;
+    margin: .15rem;
+    padding: 0 1rem;
+  }
+
+  .render-container {
+    background-color: #f8f8f8;
+    border: 1px solid #e8e8e8; /* #f5c52c; */
+    border-radius: 4px;
+    margin: .15rem;
+    padding: 0 1rem;
+  }
+
+  .draft-editor-container {
+    -webkit-flex: 2 0 0;
+    flex: 2 0 0;
+  }
+
+  .block-type {
+    display: inline-block;
+  }
+
+  .inline-style {
+    display: inline-block;
+  }
+
+  .draft-editor {
+    height: 16rem;
+    overflow-y: auto;
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    margin: .15rem;
+    padding: 0 1rem;
+  }
